@@ -30,6 +30,8 @@ app.use(function (req, res, next) {
 const db = require('./app/config/db.config.js');
 
 
+require('./app/route/personnel.route')(app);
+
 // Create a Server
 var server = app.listen(8081, function () {
 

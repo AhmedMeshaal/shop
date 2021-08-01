@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f12c6166-ef3a-4ab7-9a2f-827d8a8a958e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/db.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controller/personnel.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/personnel.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/route/personnel.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/db.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/db.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +32,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\shop\app\config" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -36,11 +45,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1627544065879</updated>
-      <workItem from="1627544066935" duration="1019000" />
+      <workItem from="1627544066935" duration="2720000" />
+      <workItem from="1627798939300" duration="648000" />
+      <workItem from="1627809290723" duration="4890000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2660" y="295" key="FileChooserDialogImpl" timestamp="1627800175778">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2660" y="295" key="FileChooserDialogImpl/0.0.1920.1080/1920.0.1920.1080@1920.0.1920.1080" timestamp="1627800175778" />
   </component>
 </project>
