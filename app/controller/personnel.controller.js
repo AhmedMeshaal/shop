@@ -21,5 +21,5 @@ exports.findAll = (req, res) => {
 exports.findByPk = (req, res) => {
     Personnel.findByPk(req.params.personnelId).then(personnel => {
         res.json(personnel);
-    })
+    });
 };

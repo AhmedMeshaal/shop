@@ -1,5 +1,5 @@
 const env = {
-    database: 'acs',
+    database: 'shop',
     username: 'root',
     password: '',
     host: 'localhost',

@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f12c6166-ef3a-4ab7-9a2f-827d8a8a958e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controller/personnel.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model/personnel.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/route/personnel.route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controller/products.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/products.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/route/products.route.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/db.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/db.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/env.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/env.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/personnel.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/personnel.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,18 +22,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1vypDky3HZKy3TMmDbixBGzF0wz" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/shop",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\shop\app\config" />
@@ -48,6 +56,7 @@
       <workItem from="1627544066935" duration="2720000" />
       <workItem from="1627798939300" duration="648000" />
       <workItem from="1627809290723" duration="4890000" />
+      <workItem from="1666609312810" duration="6699000" />
     </task>
     <servers />
   </component>
