@@ -21,6 +21,12 @@ module.exports = (sequelize, Sequelize) => {
         },
         product_quantity: {
             type: Sequelize.INTEGER
+        },
+        size: {
+            type: Sequelize.STRING
+        },
+        status:{
+            type: Sequelize.STRING
         }
     },{
         timestamps: false,

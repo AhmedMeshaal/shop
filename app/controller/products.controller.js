@@ -1,11 +1,22 @@
 const db = require('../config/db.config');
+const env = require('../config/env.js');
 const Product = db.products;
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
+var fs = require('fs');
+var path = require('path');
+var moment = require('moment');
+
+
+const ProductDocument = db.productdocument;
+
 
 // Fetch all Products
-exports.findAll = (req, res) => {
+exports.load_product = (req, res) => {
     Product.findAll().then(products => {
     //    Send all products to the client
         res.json(products);
+        console.log(products);
     });
 };
 
@@ -17,10 +28,11 @@ exports.findByPk = (req, res) => {
 };
 
 // Post a Product
-exports.create = (req, res) => {
+exports.save_product = (req, res) => {
     let product = req.body;
     Product.create(product).then(result => {
         res.json(result);
+        console.log(result);
     });
 };
 
@@ -31,7 +43,7 @@ exports.update = (req, res) => {
     Product.update(product,
         { where: { id:id } }
     ).then(() => {
-        res.status(200).json({msg:"updated successfully a product with id = " +id})
+        res.status(200).json({msg:"updated successfully a products with id = " +id})
     });
 };
 
@@ -45,3 +57,38 @@ exports.delete = (req, res) => {
         });
 };
 
+
+exports.load_documents = (req, res) => {
+
+    let ProductID = req.params.ProductID;
+    console.log(ProductID);
+
+    let sqlProduct = `SELECT productdocuments.id, productdocuments.ProductID, productdocuments.CategoryID, productdocuments.Remarks,
+                productdocuments.Path, productdocuments.UploadedDate, productdocuments.UploadedBy
+                FROM products, productdocuments WHERE products.id = productdocuments.ProductID AND ProductID='${ProductID}'`;
+
+    const { QueryTypes } = require('sequelize');
+    db.sequelize.query(sqlProduct,{
+        type: QueryTypes.SELECT
+    }).then(record => {
+
+        if (record.length == 0) return  res.status(404).send('No Record');
+
+        res.status(200).send({ "document_data": record});
+        console.log(ProductID);
+    });
+};
+
+// exports.get_categories_types = (req, res) => {
+//
+//     let sqlTypes = `SELECT id, Name FROM productdocumentcategory ORDER BY Name`;
+//
+//     const { QueryTypes } = require('sequelize');
+//     db.sequelize.query(sqlTypes,{
+//         type: QueryTypes.SELECT
+//     }).then(record => {
+//
+//         if (record.length == 0) return  res.status(404).send('No Record');
+//         res.status(200).send({ "document_types": record});
+//     });
+// };
