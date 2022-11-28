@@ -7,7 +7,7 @@ app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
 
-    var allowedOrigins = ['http://localhost:8081', 'http://localhost'];
+    var allowedOrigins = ['http://localhost:8081', 'http://localhost:4200'];
     var origin = req.headers.origin;
     if(allowedOrigins.indexOf(origin) > -1){
         res.setHeader('Access-Control-Allow-Origin', origin);
@@ -32,6 +32,7 @@ const db = require('./app/config/db.config.js');
 
 // require('./app/route/personnel.route')(app);
 require('./app/route/products.route')(app);
+require('./app/route/banner.route')(app);
 
 // Create a Server
 var server = app.listen(8081, function () {

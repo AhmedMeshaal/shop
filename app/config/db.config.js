@@ -29,5 +29,5 @@ db.sequelize = sequelize;
 //Models/tables
 // db.personnels = require('../model/personnel.model')(sequelize, Sequelize);
 db.products = require('../model/products.model')(sequelize, Sequelize);
-
+db.banner = require('../model/banner.model')(sequelize, Sequelize);
 module.exports = db;
