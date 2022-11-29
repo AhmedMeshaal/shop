@@ -11,6 +11,9 @@ module.exports = (sequelize, Sequelize) => {
         CategoryID: {
             type: Sequelize.INTEGER
         },
+        Name: {
+            type: Sequelize.STRING
+        },
         Remarks: {
             type: Sequelize.STRING
         },

@@ -61,7 +61,7 @@ exports.delete = (req, res) => {
 exports.load_documents = (req, res) => {
 
     let ProductID = req.params.ProductID;
-    console.log(ProductID);
+    // console.log(ProductID);
 
     let sqlProduct = `SELECT productdocuments.id, productdocuments.ProductID, productdocuments.CategoryID, productdocuments.Remarks,
                 productdocuments.Path, productdocuments.UploadedDate, productdocuments.UploadedBy
@@ -79,16 +79,26 @@ exports.load_documents = (req, res) => {
     });
 };
 
-// exports.get_categories_types = (req, res) => {
-//
-//     let sqlTypes = `SELECT id, Name FROM productdocumentcategory ORDER BY Name`;
-//
-//     const { QueryTypes } = require('sequelize');
-//     db.sequelize.query(sqlTypes,{
-//         type: QueryTypes.SELECT
-//     }).then(record => {
-//
-//         if (record.length == 0) return  res.status(404).send('No Record');
-//         res.status(200).send({ "document_types": record});
-//     });
-// };
+exports.upload_document = (req, res) => {
+    let ProductID = req.params.ProductID;
+    let document_data = req.body.document_data;
+    let file_data = document_data.Path;
+//console.log(file_data);
+
+    //
+    let date_string = moment().format("YYYYMMDD-HHmmss");
+    let temp_file_name = document_data.FileName;
+    let ext = temp_file_name.split(".").pop();
+    //
+    // // console.log(temp_file_name);
+    //
+    let file_name = ProductID+"-"+date_string+"."+ext;
+    document_data.Path = "/img/uploads/" + file_name;
+    document_data.UploadedDate = moment().format("YYYY-MM-DD HH:mm:ss");
+
+     fs.writeFile(env.shop_image_path + file_name, file_data, 'binary', function (err){});
+    ProductDocument.create(document_data).then(result => {
+        res.status(200).json({msg:"document uploaded successfully"});
+    })
+
+}

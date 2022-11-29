@@ -23,5 +23,5 @@ module.exports = function(app) {
 
     app.get('/api/products/load_documents/:ProductID', products.load_documents);
 
-    // app.get('api/products/get_categories_types', products.get_categories_types);
+    app.post('/api/products/upload_document/:ProductID', products.upload_document);
 }
