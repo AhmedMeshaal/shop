@@ -13,7 +13,7 @@ module.exports = (sequelize, Sequelize) => {
         product_description: {
             type: Sequelize.STRING
         },
-        photo_path: {
+        Path: {
             type: Sequelize.STRING
         },
         product_price: {
@@ -27,7 +27,13 @@ module.exports = (sequelize, Sequelize) => {
         },
         status:{
             type: Sequelize.STRING
-        }
+        },
+        UploadedOn: {
+            type: Sequelize.DATE
+        },
+        FileName: {
+            type: Sequelize.STRING
+        },
     },{
         timestamps: false,
         freezeTableName: true,

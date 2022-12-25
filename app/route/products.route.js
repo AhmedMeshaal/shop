@@ -24,4 +24,6 @@ module.exports = function(app) {
     app.get('/api/products/load_documents/:ProductID', products.load_documents);
 
     app.post('/api/products/upload_document/:ProductID', products.upload_document);
+
+    app.post('/api/products/upload_image', products.upload_image);
 }

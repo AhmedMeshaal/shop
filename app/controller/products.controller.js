@@ -102,3 +102,29 @@ exports.upload_document = (req, res) => {
     })
 
 }
+
+
+exports.upload_image = (req, res) => {
+    // let ProductID = req.params.ProductID;
+    let document_data = req.body.document_data;
+    let file_data = document_data.Path;
+//console.log(file_data);
+
+    //
+    let date_string = moment().format("YYYYMMDD-HHmmss");
+    let temp_file_name = document_data.FileName;
+    let ext = temp_file_name.split(".").pop();
+    //
+    // // console.log(temp_file_name);
+    //
+    let file_name = "-"+date_string+"."+ext;
+    document_data.Path = "/img/uploads/" + file_name;
+    document_data.UploadedOn = moment().format("YYYY-MM-DD HH:mm:ss");
+
+
+    fs.writeFile(env.shop_image_path + file_name, file_data, 'binary', function (err){});
+    Product.create(document_data).then(result => {
+        res.status(200).json({msg:"document uploaded successfully"});
+    })
+    console.log(file_name);
+}
