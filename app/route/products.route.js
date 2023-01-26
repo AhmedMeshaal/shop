@@ -7,7 +7,7 @@ module.exports = function(app) {
     app.get('/api/products/load_product', products.load_product);
 
 //    Retrieve Single Product
-    app.get('/api/products/:productId', products.findByPk);
+    app.get('/api/products/:ProductID', products.findByPk);
 
 //    Create a new Product
     app.post('/api/products/save_product', products.save_product);
@@ -21,9 +21,9 @@ module.exports = function(app) {
 //    Upload a new Image
 //     app.post('api/products/upload_image/:productId', products.upload_image);
 
-    app.get('/api/products/load_documents/:ProductID', products.load_documents);
+    app.get('/api/products/load_images/:ProductID', products.load_documents);
 
     app.post('/api/products/upload_document/:ProductID', products.upload_document);
 
-    app.post('/api/products/upload_image', products.upload_image);
+    // app.post('/api/products/upload_image', products.upload_image);
 }

@@ -83,14 +83,15 @@ exports.upload_document = (req, res) => {
     let ProductID = req.params.ProductID;
     let document_data = req.body.document_data;
     let file_data = document_data.Path;
-//console.log(file_data);
+
+    // console.log(file_data);
 
     //
     let date_string = moment().format("YYYYMMDD-HHmmss");
     let temp_file_name = document_data.FileName;
-    let ext = temp_file_name.split(".").pop();
+    let ext = temp_file_name.split("-").pop();
     //
-    // // console.log(temp_file_name);
+    // console.log(temp_file_name);
     //
     let file_name = ProductID+"-"+date_string+"."+ext;
     document_data.Path = "/img/uploads/" + file_name;
